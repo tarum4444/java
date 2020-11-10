@@ -6,18 +6,17 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class CybertekApp {
     public static void main(String[] args) {
-        ApplicationContext container=new ClassPathXmlApplicationContext("config.xml");
+        ApplicationContext container = new ClassPathXmlApplicationContext("config.xml");
 
-//        Old way to create the object
-//        Course course=new Java();
-        // casting the old way
-       //  Course course= (Course) container.getBean("java");
+        Course course1 = container.getBean("java",Course.class);
 
-        // Casting another way
-        Course course= container.getBean("java",Course.class);
+        Course course2 = container.getBean("java",Course.class);
 
-        course.getTeachingHours();
+        System.out.println("Pointing to the same object:" + (course1 == course2));
 
+        System.out.println("Memory Location for the course1:" + course1);
+
+        System.out.println("Memory Location for the course1:" + course2);
 
 
     }

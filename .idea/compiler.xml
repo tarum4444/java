@@ -7,12 +7,34 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="Spring-01-SpringContainer" />
+        <module name="Spring-07-SpringBoot-Demo" />
+        <module name="Spring-07-SpringBoot-IoC-DI-Lab" />
+        <module name="Spring-02-DI-SetterInjection" />
         <module name="Spring-02-DI-ConstructorInjection" />
+        <module name="Spring-05-JavaAnnotations-Component-Autowired" />
+        <module name="Spring-03-BeanScope-Singletion-Prototype" />
+        <module name="Spring-04-BeanLifeCycle" />
+        <module name="Spring-05-JavaAnnotations-Qualifier" />
+        <module name="Spring-06-JavaCodeConfiguration" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="Spring-01-SpringContainer" target="1.8" />
       <module name="Spring-02-DI-ConstructorInjection" target="1.8" />
+      <module name="Spring-02-DI-SetterInjection" target="1.8" />
+      <module name="Spring-03-BeanScope-Singletion-Prototype" target="1.8" />
+      <module name="Spring-04-BeanLifeCycle" target="1.8" />
+      <module name="Spring-05-JavaAnnotations-Component-Autowired" target="1.8" />
+      <module name="Spring-05-JavaAnnotations-Qualifier" target="1.8" />
+      <module name="Spring-06-JavaCodeConfiguration" target="1.8" />
+      <module name="Spring-07-SpringBoot-Demo" target="14" />
+      <module name="Spring-07-SpringBoot-IoC-DI-Lab" target="1.8" />
     </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="Spring-07-SpringBoot-Demo" options="-parameters" />
+      <module name="Spring-07-SpringBoot-IoC-DI-Lab" options="-parameters" />
+    </option>
   </component>
 </project>
